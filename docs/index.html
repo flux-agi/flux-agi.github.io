@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
 </head>
 <body>
   <div id="app"></div>
@@ -14,18 +14,70 @@
     window.$docsify = {
       name: '',
       repo: '',
+      auto2top: true,
+      coverpage: true,
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md',
       },
       subMaxLevel: 3,
       sidebarDisplayLevel: 1, // set sidebar display level
-      loadSidebar: true
+      loadSidebar: true,
+      loadNavbar: true,
+      mergeNavbar: true,
     }
   </script>
   <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+  
+  <style>
+    :root {
+      /* Color
+    ------------------------------------------------------------------------- */
+    --primary: #00cc22;
+    --secondary: #3DE8FF;
+    --black: #242230;
+    --gray-darker: #3c414b;
+    --gray-dark: #58606e;
+    --gray-regular: #595561;
+    --gray-light: #767382;
+    --gray-lighter: #c2c2d2;
 
-  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+    /* Theme */
+    --content-max-width                 : 53em;
+    --theme-color     : var(--primary);
+    --base-background-color: var(--black);
+    --base-color           : var(--gray-lighter);
+    --heading-color        : #ffffff;
+    --heading-h1-border-color   : var(--gray-darker);
+    --heading-h2-border-color   : var(--gray-darker);
+    --sidebar-background   :  var(--black);
+    --sidebar-border-color :  var(--gray-darker);
+    --sidebar-nav-link-color   :  var(--gray-lighter);
+    --sidebar-nav-link-color--active: #ffffff;
+    --sidebar-nav-link-before-color--active: var(--gray-light);
+    --sidebar-nav-link-before-color: var(--gray-regular);
+    --sidebar-width                               : 19rem;
+    --sidebar-toggle-border-radius: 100px;
+    --sidebar-toggle-height                       : 33px;
+    --sidebar-toggle-width: 33px;
+    --sidebar-toggle-offset-left                  : 8px;
+    --sidebar-toggle-background:                  : var(--black);
+    --sidebar-toggle-border-color: var(--gray-darker);
+    --sidebar-toggle-border-width: 1px;
+    --sidebar-toggle-offset-top                   : 8px;
+
+    --cover-heading-color                              : white;
+    --cover-max-width : 60em;
+    --cover-margin: 42vh auto 0 auto;
+    --cover-button-border-radius: 100px;
+}
+.mask {
+  display: none;
+}
+.cover:before {
+  display: none;
+}
+  </style>
 </body>
 </html>
