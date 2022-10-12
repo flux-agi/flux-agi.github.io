@@ -2,7 +2,7 @@
 
 ![logo](_media/space.png)
 
-# **Spiking neurons network editor**
+# **Artificial nervous system engine**
 
 - Zero-code network creation
 - Real time updates

@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# What is Flux
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Flux is a artificial nervous system engine with GUI editor, purposed to streamline the research and development of AGI and bionic robotics. Main features are:
+* Biologically close, yet computationally efficient neurons and synapses
+* Allows for direct transmission and modulation
+* Biologically accurate learning process
+* Zero-code network prototyping
+* Group, nest and reuse components
+* Real time updates. See how your modification change the overall network dynamics
+* Extensions for inputs, outputs and off-circuit computations
+* Generators for rapidly bootstrapping large-scale network in a genetic fashion
+* Synapses for single connections and fibers for multiple connections
+* Reusability, composability and inheritance: treat nervous system as a software
+* Intuitive IDE
+* Efficient: GPU powered shader computations and Rust memory management.
+* Community: share researches and circuits, gain and share inspiration.
+## Motivation
 
-## Available Scripts
+Nervous systems evolved for billions of years, adapting to the chanding environment and growing complexity for the organisms. The pinnacle of this process is the human intelligence, but still, it is limited with biology. All this findings are coded in the 8000 genes in our DNA, meaning that intellect is acrtually a set of various engineering rules. The goal of FLUX is to create a toolset, that will help us follow this path, by solving the same problems with help of vistual systems and robotics, to rediscover this patterns using engeneering approach and implement them in a reliable and versatile digital systems to eventually transcend human intelligence.
 
-In the project directory, you can run:
+Along the path to higher intelligence, this patterns can be used both in applied systems and robotics, powering a new field of technology that we call cognitronics.
 
-### `npm start`
+## Artificial life forms
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Robotix is a way to mimic the behaviour of living species. With FLUX, we can use artificial nervous systems for a completely new approach, and create a true versatile and independent artificial lifeforms, that can learn, adapt and solve various array of tasks in a completely biological fashion.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## AGI
 
-### `npm test`
+By moving in a way that biological evolution goes, we can eventually get to a place where we can transcend human intelligence.
+## Co-exploring
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The whole history of science discovery is a synergy of human minds. Flux is built around cooperation. You can share your findings, add descriptions and get feedback from another users, create circuits and extensions and share it. Learn with the others, share your discoveries and more.
 
-### `npm run build`
+## Cross-platform and performant
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We want every person to be able to leverage the power of Flux on every machine. Flux is build in the browser, which gives us the true cross-platform option and P2P communication out of box. New standards of WebGPU and WebAssembly allow us to leverage all the power of modern mass-market machines, and the network specific allows to connect any number of machines ofer the network, to power cloud-computing and achieve tremendous computational powers without supercomputers.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Principles that we follow
+* We do not need to strictly follow the biology. We are building a plane, not a mechanical bird
+* We dont need to repeat biological and leverage the stability of the digital systems
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Engine
+Current version comes with a Javascript spiking engine, but in future we want to extend to other engines like Nest, SpiNNakker and others available.
