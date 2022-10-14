@@ -1,6 +1,6 @@
 # What is Flux
 
-Flux is a artificial nervous system engine with GUI editor, purposed to streamline the research and development of AGI and bionic robotics. Main features are:
+Flux is a artificial nervous system engine with GUI editor, created to streamline the research and development of AGI and bionic robotics. Main features are:
 * Biologically close, yet computationally efficient neurons and synapses
 * Allows for direct transmission and modulation
 * Biologically accurate learning process

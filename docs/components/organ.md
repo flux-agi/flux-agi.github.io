@@ -2,11 +2,27 @@
 
 Organ a way to extend the network with off-circuit computations. Think of it as a module, or plugin, that receives a signal in the form of a spike trains, does something with this data, converts it back in the form of the spike trains and send back to the network. 
 
-Organs use neurons as an input and output interface. Its totally up to developer on how to structure the interface, in can have any amount of input and output neurons, depending on the use case. Signal in the form of spike trains can be used to whatever purposes.
+Organs use neurons as an input and output interface. Its totally up to developer on how to structure the interface, in can have any amount of input and output neurons, depending on the use case. Signal in the form of spike trains can be used to whatever purposes. In a nutshell, organ can be thought of as an IO interface, that receives a signal from the network in the form of spike trains, applies some arbitary operations and/or propagates a signal to the network in the form of a spike trains. On the engine level, it is just a set of neurons in the circuit.
 
+Organ is a code that basically subscribes to the input neuron activity and manipulates the output neurons activity.
 
-## Structure of the organ
+## Display
 
+Organ thumbnail is displayed as a vertical frame, with outout neurons on the right side, and input neurons on the left side:
+
+![Organ](../_media/organ_types.svg)
+## UI
+
+Organs can have a UI, that is built with React JS, and follows the pattern of the React Components. In has a reactive state, same as ReactJs does.
+## Organs rack
+
+Organs are displayed in the right pane of the editor. that is called an organ rack:
+
+Each organ can be expanded or collapsed, exposing the interface. To update organs settings
+
+## Creating organs
+
+Organs can be written as a regular node.js module. Organ is a folder that has 2 basic files. 
 ### Definition
 The root of the organ is organ definition class. In creates a definition for the module, that would be displayed in the interface and let you create organ instances from this class.
 
@@ -181,6 +197,8 @@ render = () => {
     return (<p>My fancy interface</p>);
 };
 ~~~
+
+As long as it is React.js, you can render everything that can be rendered using React.js. You can use any modules inside organs.
 
 In case interface needs to be reactive to display the changes, get user input etc. For this case, you can define the state of the organ. State is reactive, meaning that whenever the state changes with `setState` method, the render method will be executed, and you will get updated UI in the interface.
 ~~~js

@@ -1,12 +1,12 @@
 <!-- docs/_sidebar.md -->
 - **O V E R V I E W**
 
-  - [About](overview/about.md)
-  - [Model](overview/model_overview.md)
-  - [Achitecture](overview/architecture_overview.md)
+  - [About FLUX](overview/about.md)
+  - [Neural model](overview/model_overview.md)
+  - [Implementation](overview/architecture_overview.md)
   - [Usage](overview/usage.md)
   - [Interface](overview/interface.md)
-  - [Future](overview/roadmap.md)
+  - [Roadmap](overview/roadmap.md)
 
 - **C O M P O N E N T S**
 

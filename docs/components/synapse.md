@@ -8,6 +8,8 @@ Synapse it a way of neuron to communicate with another neuron. It can be thought
 | `Modulator`                             | Alters the modulation level, that controls the neurons properties. Does not participate in direct firing               |
 | `Electric`                             | Causes receptor neuron to fire unconditionally             |
 
+![Synapse](../_media/synapse_types.svg)
+
 In the interface, direct synapses are displayed as a guide from one neuron to another. The width of synapse is proportional to its weight.
 Synapses can have both positive and negative weight. In case it is positive, it is colored as green. In case it is negative - blue.
 The gradient of the line indicates the direction - the color is more vivid closer to the emitter cell, and desaturates closer to the receiver cell.
