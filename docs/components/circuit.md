@@ -8,12 +8,14 @@ Circuits are displayed as a set of neurons, arranged in a grid, hidden in the ci
 ![Circuit](../_media/circuit_types.svg)
 
 Neurons, marked as input and output, are displayed on top and the bottom of the thumbnail accordingly.  
-## Circuit properties
+## Properties
 
 | Name                             | Type                 | Default                        | Description                                                                                                                                |
 | -------------------------------- | -------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `name`                    | `String` | ``                    | Display name of the circuit                                                                                                                      |
-| `description`              | `String`             | ``                            | Markdown string                                                                                               |
+| `title`                    | `String` | ""                    | Display name of the circuit                   |
+| `description`              | `String`             | ""                            | Markdown string                           |
+| `isReusable`              | `Boolean`             | `false`                            | If true, circuit will appear in the explorer and circuits list as a reusable component                           |
+| `isShared`              | `Boolean`             | `false`                            | If true, circuit will be accessible by all users of Flux in the global explorer.                          |
 
 ## Creating circuits
 

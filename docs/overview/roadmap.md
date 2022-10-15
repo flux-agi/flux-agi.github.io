@@ -5,6 +5,7 @@ The ultimate goal of FLUX project is to create a superior intelligence, lacking 
 
 Modern science, neurophysiology and cognitive psychology have accumulated extensive knowledge about human intelligence, the nature of intelligence itself, at various levels from cellular chemistry to social interaction and culture. This baggage is sufficient enough for us to get closer to the creation strong artificial intelligence. We need to act consistently turning knowledge into working models, passing the evolutionary path from the simplest reflex acts to self-perception, imagination and self-awareness. This path requires deep knowledge of biology and physiology, and at the same time engineering analysis.
 
+![Path](../_media/path.png)
 ### 1. Peripheral nervous system
 Neurophysiology describes in great detail the nerve cell - the neuron, and many processes occurring in it, up to individual protein molecules, the mechanics of synaptic transmission are described in detail, connectomes of individual sections of the nervous systems, some reflexes are created. But we do not use this knowledge to control, for example, robots and other mechanisms, although nature has created an amazing way to “program” the behavior of organisms with a simple nervous system, to set innate reflexes in all nervous systems. And it n works just great. This programming has its own rules and patterns, it is universal and natural. It is possible to create an editor of the nervous system, convenient for people of any level of training and, like the creator, create nervous systems for virtual and real mechanisms. Learn the mechanics of simple and complex reflex acts.
 We also hope that this work will be very useful academically, as a research tool and as an educational, visual, accessible and interactive stand. The opportunity not only to create and observe, but also to share their experiences.
@@ -43,22 +44,22 @@ It is believed that the prefrontal cortex is a highly developed olfactory bulb. 
 
 The path described here turned out to be evolutionarily correct, which makes it quite stable and methodical. Each point will give us the technology to create very useful and in-demand products, as well as expand our knowledge about the nervous system and about ourselves.
 
-## Morale of AGI:
-We need to be very careful on the value systems of AI, that serves as a morale, and does not let it use its creative finding to do direct or collateral, intended or unintended harm.
+## Morale of AGI
+We need to be very careful on the value systems of AI, that serves as a morale, and does not let it use its creative finding to do direct or collateral, intended or unintended harm. Every decision is basically a transition from one state to another. Every decision should:
 
-* Improve the life of individual
-* Improves the life of group.
-* Improves the life of the organics.
-* Follows the harmony of the universe
+First is the individual-group scale:
+* Improves the state of individual
+* Improves the state of group.
+* Improves the state of the organics.
 
+Another one is certainty-uncertainty scale:
 There is also a time Factor. So the solution should fit all the vectors, and work for most timescales, preferably for the current, but without digrading in the past.
 The is also a certanty and risk factor, meaning whether it can be risky or not.
+
+Another one is the minimal-radical scale:
 This evaluation happens as a part of the thinking process, until eventually it finds a solution.
 
-## The human interaction and theory of mind
-In the end, working with SAI will be reduced to bidirectional human interaction. While interacting with human, SAI should have some theory of mind of the person, ecaluate its intentions, current mood, and have a strong tendency to make good, using the framework. Apart from the firect request, the passive thinking process of SAI should be directed to improving the current state of human, according to the described values system, and suggest some solution if it finds one.
-
-## Future FLUX goals
+## Future FLUX technology goals
 * Optmizing engine performance by using WebGPU and WebAssembly.
 * RTC protocol for efficient interdevice networks
 * Planetron - neuronal cloud-computing platform, joining all the developers in a single interconnected neural network

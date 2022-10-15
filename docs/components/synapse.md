@@ -20,7 +20,10 @@ Synapses can be a subject to hebbian spike timing dependent learning. The learne
 
 | Name                             | Type                 | Default                        | Description                                                                                                                                |
 | -------------------------------- | -------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `synapseType`                    | `DIRECT`, `MODULATOR`, `ELECTRIC` | `DIRECT`                    | Synapse type that defines its effect on neuron                                                                                                                    |
 | `weight`                    | `Int8` | `20`                    | Default synaptic weight. CAn be alrred by both short-term and long-term learning.                                                                                                                       |
-| `modulation`              | `Int8`             | `20`                            | Rate at which the level is decreasing.                                                                                               |
+| `length`                    | `Int16` | `10`                    | The delay after source neuron fires and change on source neuron takes effect.                                                                                                                  |
+| `stmRate`                    | `Int8` | `10`                    | Short-term memory rate. Determines synapses ability to adapt its weight. Does not persist.                                                                                                    |
+| `ltmRate`              | `Int8`             | `20`                            | Long-term memory rate. Determines synapses ability to persistently change its weight according to activity and modulation.                                                                                         |
 
 

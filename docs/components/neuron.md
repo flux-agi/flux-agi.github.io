@@ -14,7 +14,7 @@ After firing - neuron has a refractory period, meaning it wont react to any inco
 
 Another important properties are adaptation and restoration. If during refractory period, neuron is stimulated too strong, it adapts to the level, increasing its threshold. Vise versa - if it does not get much stimulation, it reduces its level, in order to be more reactive.
 
-Here is the list of neuron properties, that can be controlled on creation:
+## Properties
 
 | Name                             | Type                 | Default                        | Description                                                                                                                                |
 | -------------------------------- | -------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -30,12 +30,19 @@ Here is the list of neuron properties, that can be controlled on creation:
 
 This properties can be used as a main characteristics of neurons. Chromo-modulation is a way to alter this properties. Modulation, the same way as regular level, can be either positive or negative, though there is a difference in level handling. For the activeLevel, the leak always moves the level to `0`. In case of modulation level, in moves to the balance: a center point, that can be displaced to either negative or positive side, depending on the modulation sum. For ex. if you modulate the threshold, and modulation level is shifted to negative, it increases the threshold, making neuron less responsive. And vise versa - if modulation is displaced to positive, threshold will be lower.
 
-When accessed via engine API (for ex. in organ body), neuron exposes several methods:
+When accessed via engine API (for ex. in organ body), neuron exposes several methods.
 
-Here is the list of neuron properties, that can be controlled on creation:
+## Methods
 
-| Name                             | Type                 | Default                        | Description                                                                                                                                |
-| -------------------------------- | -------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `threshold`                    | `Int8` | `127`                    | Neurons default firing threshold.                                                                                                                       |
+| Name                             | Type                                        | Description                                                                                                                                |
+| -------------------------------- | -------------------- |  ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `fire`                    | `() => void`                  | Emits a spike over all of it afferent neurons        |
+| `summation`                    | `(weight: number) => void`                  | Adds a weight to neurons current level and initiates re-calculation        |
+| `modulate`                    | `(weight: number) => void`                  | Adds a weight to neurons current level and initiates re-calculation        |
+| `modulate`                    | `(weight: number) => void`                  | Adds a weight to neurons current level and initiates re-calculation        |
+| `update`                    | `(neuron: NeuronType) => void`                  | Updates a neuron in the engine, in real-time       |
+| `updateSynapse`                    | `(synapse: SynapseType) => void`                  | Updates a neurons synapse in the engine, in real-time       |
+| `getAfferents`                    | `() => [SynapseType]`                  | Returns a list of all afferent (incoming) synapses       |
+| `getEfferents`                    | `() => [SynapseType]`                  | Returns a list of all efferents (outcoming) synapses       |
 
 In order not to over complicate the code and editor, we move with rates, instead of static values, that can be tuned using sliders. In most cases, you dont need those precise values, the same way, those precision is not applicable to the biological nervous systems.

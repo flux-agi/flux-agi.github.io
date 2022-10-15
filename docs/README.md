@@ -17,12 +17,12 @@ Flux is a artificial nervous system engine with GUI editor, created to streamlin
 * Community: share researches and circuits, gain and share inspiration.
 * Powerful extension mechanism, that allows to add any input, output and non-neuronal computations to the system
 
-Flux aims to be a foundational technology for AGI, giving a performant framework and IDE for the new type of software, to power the new field of robotics and AI, that can run on mass-market machines and scale horizontally.
+> Flux aims to be a foundational technology for AGI, giving a performant framework and IDE for the new type of software, to power the new field of robotics and AI, that can run on mass-market machines and scale horizontally.
 ## Motivation
 
 Nervous systems evolved for billions of years, adapting to the chanding environment and growing complexity for the organisms. The pinnacle of this process is the human intelligence, but still, it is limited with biology. All this evolutionary findings are coded in the 8000 genes in our DNA, meaning that intellect can be converged to a set of engineering finding, coded in ~50kb of genetic information. The goal of FLUX is to provide a toolset, same as evolution had, that will help us reverse engineer intelligence, following the evolutionary path. Solving the same problems with help of vistual systems and robotics, we will be able to rediscover this patterns using engeneering approach and implement them in a reliable and versatile digital systems to eventually transcend human intelligence.
 
-Along the path to superior intelligence, the functional findings can be used both in applied digital systems and robotics, powering a new field of technology that we call cognitronics.
+**Along the path to superior intelligence, the functional findings can be used both in applied digital systems and robotics, powering a new field of technology that we call cognitronics.**
 
 ## AGI - the final invention
 
@@ -41,9 +41,3 @@ The whole history of scientific discovery is a synergy of human minds. Flux is b
 ## Neuromorphic hardware
 
 The computational patterns, found using Flux, can be recreated in silicon and used as a base for new generation of neuromorphic hardware, to make brain-like executions more efficient.
-## Principles that we follow
-* We do not need to strictly follow the biology. We are building a plane, not a mechanical bird
-* We dont need to repeat biological and leverage the stability of the digital systems
-
-## Engine
-Current version comes with a Javascript spiking engine, but in future we want to extend to other engines like Nest, SpiNNakker and others available.
