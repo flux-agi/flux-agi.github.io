@@ -1,48 +1,47 @@
 # Neuron
 
-Neuron is the basic computational unit of the network. You can read the general overview here. We rely on WebGPU to allow for performant parallel computations on your machines GPU. You need to do some special steps to enable WebGPU support. In case it is not enabled, we fallback to a CPU version, but it is much less performant (actually up to 200 times slower🤖).
+The fundamental computational unit of FLUX artificial nervous systems is the neuron. We rely on WebGPU to carry out quick parallel computations on any machine. To make WebGPU support available, you must perform some special actions. We fall back to a CPU version if it is not enabled, although it is significantly less efficient (up to 200 times slower).
 
 
 ![Neuron](../_media/neuron_types.svg)
 
 
-Neuron has 2 levels: the threshold level and modulation level. Threshold level is controlled by direct synapses, modulation level is controlled by modulator synapses.
+A neuron has 2 internal "levels": the threshold level and the modulation level. Threshold level is controlled by `direct` synapses, while modulation level is controlled by `modulatory` synapses.
 
-Neurons can either create a single spike, or a spike train. In depends on the threshold overshoot.
+Upon firing, a neuron can either generate a single spike or a spike train. It depends on a threshold overshoot.
 
-After firing - neuron has a refractory period, meaning it wont react to any incoming signals and modify its levels.
+After firing, a neuron enters a refractory period, meaning it will not react to any incoming signals.
 
-Another important properties are adaptation and restoration. If during refractory period, neuron is stimulated too strong, it adapts to the level, increasing its threshold. Vise versa - if it does not get much stimulation, it reduces its level, in order to be more reactive.
+Other important properties are adaptation and potentiation. If a neuron is stimulated too strongly during the refractory period, it will increase its threshold. This process is called `adaptation` and it is very important for network stability. If a neuron does not get much stimulation for a long time, it reduces its threshold in order to be more reactive. This process is called `potentiation`.
 
 ## Properties
 
 | Name                             | Type                 | Default                        | Description                                                                                                                                |
 | -------------------------------- | -------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `threshold`                    | `Int8` | `127`                    | Neurons default firing threshold.                                                                                                                       |
-| `leak`              | `Int8`             | `20`                            | Rate at which the level is decreasing.                                                                                               |
-| `modulationLeak`              | `Int8`             | `0`                          | Rate at which modulation level is returned to balance. If `0`, neuron is not sensitive to modulation.                                                                                          |
-| `burstingRate`              | `Int8`             | `0`                          | If value is `> 0` and threshold is overshoot significantly before firing, neuron will respond with a spike train, instead of a single spike. If `0` - neuron always responds with a single spike.                                                                                             |
-| `autoFiringRate`              | `Int16`             | `0`                          | Interval in milliseconds on how fast the neuron should be firing without any external stimulation. If `0`, autofiring is off.                                                                                               |
-| `inputAlias`              | `String`             | `null`                          | If set, input will be marked as input (with an arrow) and be displayed in the circuit thumbnail accordingly.                                                                                           |
-| `inputDescription`              | `String`             | `null`                          | Additional information, related to the input. In case you need to communicate something more.                                                                                               |
-| `outputAlias`              | `String`             | `null`                          | If set, input will be marked as output (with an arrow) and be displayed in the circuit thumbnail accordingly.                                                                                           |
-| `outputDescription`              | `String`             | `null`                          | Additional information, related to the output. In case you need to communicate something more.                                                                                               |
+| `threshold`                    | `Int8` | `127`                    | Default firing threshold.                                                                                                                       |
+| `leak`              | `Int8`             | `20`                            | The rate at which the level is decreasing.                                                                                             |
+| `modulationLeak`              | `Int8`             | `0`                          | The rate at which the modulation level returns to equilibrium. If `0`, neuron is not sensitive to modulation.                                                                                   |
+| `burstingRate`              | `Int8`             | `0`                          | If value is `> 0` and threshold is overshot significantly before firing, the neuron will respond with a spike train instead of a single spike. If `0, the neuron always responds with a single spike.                                                                                     |
+| `autoFiringRate`              | `Int16`             | `0`                          | The interval in milliseconds, which determines the firing frequency of a neuron without any external stimulation. If `0`, auto-firing is off.                                                                                    |
+| `inputAlias`              | `String`             | `null`                          | Neuron will be designated as input if set (with inward pointing an arrow and alias).                                                                |
+| `inputDescription`              | `String`             | `null`                          | Additional information related to the input will be displayed on hover.                                                                              |
+| `outputAlias`              | `String`             | `null`                          | Neuron will be designated as output if set (with outward pointing an arrow and alias)                                                                              |
+| `outputDescription`              | `String`             | `null`                          | Additional information related to the output will be displayed on hover.                                                                                       |
 
-This properties can be used as a main characteristics of neurons. Chromo-modulation is a way to alter this properties. Modulation, the same way as regular level, can be either positive or negative, though there is a difference in level handling. For the activeLevel, the leak always moves the level to `0`. In case of modulation level, in moves to the balance: a center point, that can be displaced to either negative or positive side, depending on the modulation sum. For ex. if you modulate the threshold, and modulation level is shifted to negative, it increases the threshold, making neuron less responsive. And vise versa - if modulation is displaced to positive, threshold will be lower.
+These properties are used as the default characteristics of a neuron. Modulation is a way to alter those properties. The modulation level, in the same way as the regular level, can be either positive or negative, though there is a difference in level handling: for the direct level, the `leak` always decreases the level to `0`. In the case of modulation level, it seeks balance: a center point. Modulation is displaced to either negative or positive side by incoming `modulatory synapses`. For instance, if the threshold is modulated and the modulation level is changed to negative, the active threshold is raised and the neuron becomes less sensitive. Threshold will be reduced if modulation is displaced to the positive side.
 
-When accessed via engine API (for ex. in organ body), neuron exposes several methods.
+When accessed via the engine API (for example, in an organ body), neuron exposes several methods.
 
 ## Methods
 
 | Name                             | Type                                        | Description                                                                                                                                |
 | -------------------------------- | -------------------- |  ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `fire`                    | `() => void`                  | Emits a spike over all of it afferent neurons        |
-| `summation`                    | `(weight: number) => void`                  | Adds a weight to neurons current level and initiates re-calculation        |
-| `modulate`                    | `(weight: number) => void`                  | Adds a weight to neurons current level and initiates re-calculation        |
-| `modulate`                    | `(weight: number) => void`                  | Adds a weight to neurons current level and initiates re-calculation        |
-| `update`                    | `(neuron: NeuronType) => void`                  | Updates a neuron in the engine, in real-time       |
-| `updateSynapse`                    | `(synapse: SynapseType) => void`                  | Updates a neurons synapse in the engine, in real-time       |
+| `fire`                    | `() => void`                  | Emits a spike, activating all efferent synapses        |
+| `summation`                    | `(weight: number) => void`                  | Adds a weight to neurons direct level and initiates re-calculation        |
+| `modulate`                    | `(weight: number) => void`                  | Adds a weight to neurons modulation level and initiates re-calculation        |
+| `update`                    | `(neuron: NeuronType) => void`                  | Updates neuron properties in real-time       |
+| `updateSynapse`                    | `(synapse: SynapseType) => void`                  | Updates neurons synapse properties in real-time       |
 | `getAfferents`                    | `() => [SynapseType]`                  | Returns a list of all afferent (incoming) synapses       |
 | `getEfferents`                    | `() => [SynapseType]`                  | Returns a list of all efferents (outcoming) synapses       |
 
-In order not to over complicate the code and editor, we move with rates, instead of static values, that can be tuned using sliders. In most cases, you dont need those precise values, the same way, those precision is not applicable to the biological nervous systems.
+In order not to over-complicate the code and editor, we move with rates instead of static values that can be tuned using sliders. In most cases, you don't need this level of precision. There is also not much precision in the biological networks.

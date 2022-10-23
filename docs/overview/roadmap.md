@@ -1,22 +1,20 @@
 # Roadmap
 
-The ultimate goal of FLUX project is to create a superior intelligence, lacking biological factors of survival and reproduction, that acts according to morale and uses its computational power to the prosperity of humanity and all organic life.
+The ultimate goal of FLUX is to create a superior intelligence.
 ## Our path to AGI
 
-Modern science, neurophysiology and cognitive psychology have accumulated extensive knowledge about human intelligence, the nature of intelligence itself, at various levels from cellular chemistry to social interaction and culture. This baggage is sufficient enough for us to get closer to the creation strong artificial intelligence. We need to act consistently turning knowledge into working models, passing the evolutionary path from the simplest reflex acts to self-perception, imagination and self-awareness. This path requires deep knowledge of biology and physiology, and at the same time engineering analysis.
+Modern science, neurophysiology, and cognitive psychology have accumulated extensive knowledge about human intelligence, the nature of intelligence itself, at various levels from cellular chemistry to social interaction and culture. This baggage is sufficient enough for us to get closer to the creation of strong artificial intelligence. We need to act consistently, turning knowledge into working models, passing the evolutionary path from the simplest reflex acts to self-perception, imagination, and self-awareness.
 
 ![Path](../_media/path.png)
 ### 1. Peripheral nervous system
-Neurophysiology describes in great detail the nerve cell - the neuron, and many processes occurring in it, up to individual protein molecules, the mechanics of synaptic transmission are described in detail, connectomes of individual sections of the nervous systems, some reflexes are created. But we do not use this knowledge to control, for example, robots and other mechanisms, although nature has created an amazing way to “program” the behavior of organisms with a simple nervous system, to set innate reflexes in all nervous systems. And it n works just great. This programming has its own rules and patterns, it is universal and natural. It is possible to create an editor of the nervous system, convenient for people of any level of training and, like the creator, create nervous systems for virtual and real mechanisms. Learn the mechanics of simple and complex reflex acts.
-We also hope that this work will be very useful academically, as a research tool and as an educational, visual, accessible and interactive stand. The opportunity not only to create and observe, but also to share their experiences.
+Neurophysiology describes in great detail the nerve cell - the neuron, and many processes occurring in it, up to individual protein molecules, the mechanics of synaptic transmission are described in detail. But we do not use this knowledge to control, for example, robots and other mechanisms, although nature has created an amazing way to “program” the behavior of organisms with a simple nervous system. And it works just great. This programming has its own rules and patterns, it is universal and natural.
 This item includes not only the construction of reflex circuits, but at this stage basic ideas about emotions, needs and instincts appear. The reflex circuit can include protective reflexes and reactions, the state of hunger and satiety, the desire to conserve energy and the interaction of all these mechanisms. It is the foundation for purposeful behavior and learning while creating cognitively highly developed models. 
 
 ### 2. Cerebellum.
 
-The cerebellum is one of the oldest parts of the brain; it already appears in fish and is of the most important and fundamental importance for the evolutionary development of the nervous system. The main activity of the brain and the nervous system as a whole is motor actions. Even human speech and writing are primarily motor actions, even our thoughts when using “inner speech” are motor actions. The cerebellum makes motor acts more accurate and coordinated, it stores the memory of short time intervals, it is a chronometer and stopwatch of all motor actions. It has an amazing structure, neuroscientists call it a crystal. Strict rows of Purkinje cells and bundles of parallel fibers perpendicular to their plane have an amazing order in tissue organization, which cannot be compared with the tissue of other organs. Dealing with time requires precision and rigor.
-Let's imagine that in our connectome editor we have created basic reflexes for a robot dog. He can stand, sit, walk and run, but it all works great in ideal conditions, on flat surfaces without external influences, shocks, winds and any defects in operation. This is where the virtual cerebellum comes to the rescue. It is easily integrated into our model, since it works as an add-on to motor signals from the central nervous system or unconditioned reflexes, it corrects signals depending on the prevailing external conditions, internal states and its memory.
+The cerebellum is one of the oldest parts of the brain. The main activity of the brain and the nervous system as a whole is a set of motor actions. The cerebellum makes motor acts more accurate and coordinated, it stores the memory of short time intervals, it is a chronometer and stopwatch of all motor actions. It has an amazing structure, neuroscientists call it a crystal. Strict rows of Purkinje cells and bundles of parallel fibers perpendicular to their plane have an amazing order in tissue organization, which cannot be compared with the tissue of other organs. Dealing with time requires precision and rigor.
+Let's imagine we have created basic reflexes for a robot dog. He can stand, sit, walk and run, but it all works great in ideal conditions, on flat surfaces without external influences, shocks, winds and any defects in operation. This is where the virtual cerebellum comes to the rescue. It is easily integrated into our model, since it works as an add-on to motor signals from the central nervous system or unconditioned reflexes, it corrects signals depending on the prevailing external conditions, internal states and its memory.
 The human brain contains 86 billion neurons and 60 billion of them belong to the cerebellum, predominantly most of the cerebellar neurons are very small, granular cells grouped into the nuclei of the cerebellum. These cells receive multiple signals from the basal ganglia - these are duplicate signals that control the muscles, and granular cells also receive signals from proprioception and the vestibular apparatus. Combining all these signals, the granular cells of the cerebellum, like Kenyon cells from the mushroom body, form a sparse “small” representative representation. Mutual inhibitory action leaves only a small number of neurons active, this population of active cells will represent a key. The fact is that there are countless possible variations and combinations of external and internal signals, so that the problem of a combinatorial explosion does not arise, it is necessary to represent all this in the form of a small representation, it is difficult to apply the term “small” to a representation of almost 60 billion cells. We need this size just for accuracy, in order to choose the correct adjustment of the signals that control the muscles.
-Much is known about the cerebellum, the concept of a sparse representational representation has been used in mathematics and computer science for a long time, we know how it works, we need to use and implement it. Moreover, we can apply engineering analysis and optimize some aspects of the cerebellum. Motor acts are the basis of any cognitive mechanisms.
 Imagine a technology where we create basic reflexes for a robot in a reactor, then we release it into a virtual or real environment filled with tests, it makes mistakes and falls, we help it get up and it tries again and again, and at the same time learn, correct those control signals that asked him initially.
 Now there is an active development of anthropomorphic robots, and one of the most difficult tasks that engineers solve is the coordination of motor skills and balance control, why not use the solutions prompted by nature.
 
@@ -44,23 +42,23 @@ It is believed that the prefrontal cortex is a highly developed olfactory bulb. 
 
 The path described here turned out to be evolutionarily correct, which makes it quite stable and methodical. Each point will give us the technology to create very useful and in-demand products, as well as expand our knowledge about the nervous system and about ourselves.
 
-## Morale of AGI
-We need to be very careful on the value systems of AI, that serves as a morale, and does not let it use its creative finding to do direct or collateral, intended or unintended harm. Every decision is basically a transition from one state to another. Every decision should:
+## "Moral values" of AGI
+We need to be very careful about the value systems of AI and not let it use its creative potential to do direct or collateral, intended or unintended harm. Every decision AI makes is basically a transition from one state to another. Every transition should:
 
-First is the individual-group scale:
+Individual-group scale:
 * Improves the state of individual
-* Improves the state of group.
-* Improves the state of the organics.
+* Improves the state of the group.
+* Improves the state of the organic life.
 
-Another one is certainty-uncertainty scale:
-There is also a time Factor. So the solution should fit all the vectors, and work for most timescales, preferably for the current, but without digrading in the past.
-The is also a certanty and risk factor, meaning whether it can be risky or not.
+Certainty-uncertainty scale:
+There is also a time factor. So the solution should fit all the vectors and work for most timescales, preferably for the current one, but without digressing in the past.
+There is also a certainty and a risk factor, meaning whether it can be risky or not.
 
-Another one is the minimal-radical scale:
+Minimal-radical scale:
 This evaluation happens as a part of the thinking process, until eventually it finds a solution.
 
 ## Future FLUX technology goals
-* Optmizing engine performance by using WebGPU and WebAssembly.
-* RTC protocol for efficient interdevice networks
-* Planetron - neuronal cloud-computing platform, joining all the developers in a single interconnected neural network
-* Neuromorphic computing. Prototyping analog hardware to move on an integrated scheme
+* Using WebGPU and WebAssembly to improve engine performance.
+* RTC protocol for effective device-to-device communications
+* platform for neuronal cloud computing that unites all the clients into a single, interconnected neural network.
+* Neuromorphic hardware implementation

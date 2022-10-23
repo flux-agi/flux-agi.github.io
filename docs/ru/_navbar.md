@@ -1,3 +1,3 @@
-- Translations
+- Другие языки
   - [:uk: English](/)
   - [:ru: Русский](/ru/)

@@ -1,42 +1,38 @@
 # Implementation overview
 
-The goal of FLUX is to utilize the mass-market hardware. The requirements are:
-* cross-platform
-* P2P connectivity
-* performance
-* working on mass-market machines
+FLUX engine is implemented in `Typescript`, `Rust` and `WebGPU Shading Language`. It runs as a browser application and utilizes `WebAssembly` and `WebGPU` standards to maximize performance. These architectural decisions give FLUX a number of advantages:
+* platform independence
+* computational efficiency
+* horizontal scalability
+* peer-to-peer communication out-of-box 
 
-FLUX engine is implemented in `Typescript`, `Rust` and `WebGPU Shading Language`. It runs as a browser application, and utilizes `WebAssembly` and `WebGPU` standard, to access maximum performance. Being a browser app, it lets Flux be cross-platroms and communication centered from the ground up.
 ## Engine
 
-Engine maintains a flat list of neurons, and connections between them. To keep this in memory, we utilize WebAssembly and Rust language, to optimize memory usage and be able to maintain a network of over 1000000 neurons on consumer machines. Engine optimally splits load between CPU, GPU and RAM, making the best of mass-market consumer machines.
+The engine consists of 3 core parts:
 
 ![Architecture overview](../_media/architecture_overview.svg)
 
-Engine consists of 3 core parts:
-* **Neurons graph**
-* **Computational core**
-* **Event loop**
+**Neurons graph** is a flat list of neurons in the system, with their states, properties, and connections. It is implemented in `WebAssembly` and `Rust`, to guarantee efficient memory usage. This utilizes RAM. To save memory, we try to keep most of the numeric values in the Uint8 type.
 
-**Neurons graph** is a flat list of all the neurons in the system, with their state, properties and an afferent synapses. It is implemented in `WebAssembly` and `Rust`, to guarantee the most optimal memory usage. This utilizes RAM. To save memory, we try to keep most of the numeric values in Uint8 type.
+**Computational core** is where the neuronal processing happens. Computations happen when a neuron accepts a stimulus over incoming synapses. It determines whether it needs to be fired or not, by comparing its state and properties. with respect to time, and updates its state. This runs on the GPU, via `WebGPU` and `WebGPU Shading Language`.
 
-**Computational core** is where the neuronal processing goes on. It calculates ones neuron accepts a stimulation over synapses, and determines whether it needs to fire or not, by comparing its state and properties. with respect to time. This runs on the GPU, via `WebGPU` and `WebGPU Shading Language`.
+**Event loop** is something that maintains the action potential processing and orchestrates the activity of the network. It is implemented in `Typescript`, which has an event loop implementation in its core and utilizes the CPU. Modern Javascript engines like Google's V8 have outstanding performance, very close to compiled languages.
 
-**Event loop** is something that maintains the action potential processing and orchestrates the activity of the network. It is implemented in `Typescript`, which has an event loop implementation in its core, and utilizes CPU. Modern javascript interpreters like Googles V8 make sure that program runs on the performance close to compilable languages.
-
-Knowing the fact that only 2% on brain neurons are actually active, to optimize memory usage of the pub-sub, the process of mounting and unmounting neurons can be dynamic. Our goal is to be able to run a network of 10 billion neurons on a regular laptop. And extend it by any number of devices on network with Flux Macro RTC protocol and/or add remote VPS servers on demand. So that researches are not limited in scale.
+There is still a lot of ongoing work in terms of engine improvements. Our goal is to be able to run a network of 10 billion neurons on a regular laptop. Another thing we should keep in mind is the future usage of [neuromorphic chips](https://en.wikipedia.org/wiki/Neuromorphic_engineering).
 
 ## Non-neuronal computations
 
-Any system in the end is I/O, meaning it should at least accept input and generate output. Also it may need to run an off-circuit computations. Flux networks are extendable by nature.
-This is intended to be created by community, so the performance is up to developers.
+Any software system does some I/O, meaning it should accept input and generate output. FLUX has a very powerful extension mechanism that allows you to send input to the network, read its output, and perform non-neuronal computations.
 
 ![Organs overview](../_media/organs_overview.svg)
+
+We call these extensions "organs". It can be treated as a piece of code that runs alongside the network and has connections to neurons via the Engine API. In addition to this, organs can have an interface in the editor. You can create your own organs for FLUX. In some time, we expect a big ecosystem of extensions that will fit any need.
+
 ## Core components and terminology
 
 | Name                             | Description                 | 
 | -------------------------------- | -------------------- |
-| **Circuit**                 | Circuit is a functionally complete set of neurons and connections between them. It is the main building block of Flux artificial nervous systems. Circuit can contain nodes, like neurons, organs and another circuits and connections between them. Circuits can be saved to prototypes, grouped, nested, and inherited by another circuits. Intelligent circuit hierarchy can be beneficial in terms of network maintainability and growth.                |
-| **Neuron**                             | Neuron is the basic computational unit of FLUX. It implements a leaky modulated integrate-and-fire neuron model, with habituation and potentiation properties. On firing neuron can either emit a single spike, or a spike train, depending on the threshold overshoot.           |
-| **Synapse**                             | Synapse is the connection between neurons. Synapse weight determines the level of influence to the target neuron. Weight sign determines whether synapse is inhibitory or excitatory. There are three types of synapses: direct, modulator and electric. Synapse can be plastic, and change their weight in the process of Hebbian learning. Learning is mediated by modulation and firing activity.           |
-| **Organ**                             | Organ is a code that runs alonglide with the engine, and utilize neurons as its input and output interface. Input organs accept signal in the form of its input neurons firing. Output organs generate signals in the form of spiking patterns via its output neurons.           |
+| **Circuit**                 | A circuit is a functionally complete set of neurons and the connections between them. It is the main building block of FLUX artificial nervous systems. A circuit can contain nodes, like neurons, organs, and other circuits. Circuits can be saved as prototypes, grouped, nested, and inherited by other circuits. Intelligent circuit hierarchies can be beneficial in terms of network maintainability and growth.             |
+| **Neuron**                             | A neuron is the basic computational unit of FLUX. It implements a leaky modulated integrate-and-fire neuron model, with habituation and potentiation properties. On firing, a neuron can either emit a single spike or a spike train, depending on the threshold overshoot.         |
+| **Synapse**                             | A synapse is the connection between two neurons. Synapse weight determines the level of influence on the target neuron. The weight sign determines whether the synapse is inhibitory or excitatory. There are three types of synapses: direct, modulator, and electric. Synapses can be plastic and change their weight in the process of Hebbian learning. Learning is mediated by firing activity and modulation.         |
+| **Organ**                             | Organ is a code that runs along with the engine and utilizes neurons as its input and output interface. Input organs accept signals in the form of input neuron's spikes. Organs generate an output in the form of spikes via their output neurons.        |

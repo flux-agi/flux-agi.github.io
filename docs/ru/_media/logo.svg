@@ -1,0 +1,19 @@
+<svg width="2253" height="1643" viewBox="0 0 2253 1643" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_7_48)">
+<line x1="1264.18" y1="624.251" x2="1264.18" y2="700.752" stroke="white" stroke-width="2"/>
+<line x1="1133.39" y1="624.251" x2="1133.39" y2="703.219" stroke="white" stroke-width="2"/>
+<path d="M1265.65 700.752C1265.65 737.55 1236.37 767.381 1200.26 767.381C1164.14 767.381 1134.86 737.55 1134.86 700.752" stroke="white" stroke-width="2"/>
+<line x1="481.535" y1="624.707" x2="478.959" y2="1716.05" stroke="white" stroke-width="2"/>
+<line x1="480.535" y1="623.705" x2="610.43" y2="623.705" stroke="white" stroke-width="2"/>
+<line x1="480.535" y1="698.755" x2="567.132" y2="698.755" stroke="white" stroke-width="2"/>
+<line x1="804.705" y1="768.032" x2="936.012" y2="768.032" stroke="white" stroke-width="2"/>
+<line x1="805.705" y1="-167" x2="805.705" y2="769.032" stroke="white" stroke-width="2"/>
+<line x1="1483.88" y1="623.997" x2="1628.2" y2="768.325" stroke="white" stroke-width="2"/>
+<line y1="-1" x2="2886.55" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 2285.1 -24.7698)" stroke="#10CC55" stroke-width="2"/>
+</g>
+<defs>
+<clipPath id="clip0_7_48">
+<rect width="2253" height="1643" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,8 +1,8 @@
 # Generator
 
-What if you need to create some repetative circuit, lets say a reservoir of 100 randomly connected neurons. This is where generators kick in. Basically, generator is a function, that returns a json description of the circuit and lets you programatically define circuit nodes and connections between them.
+If you need to create a circuit based on a set of parameters (let's say a reservoir of 100 randomly connected neurons), you can use generators. Basically, a generator is a function that accepts a set of user-defined parameters and returns a list of circuit nodes in a json format.
 
-Generator can accept settings to collect user input and also has an access to the current network via Engine API. Here is the example code for the generator that creates a so called reservoir (collection of randomly recurrently connected neurons with fixed synaptic weights):
+Generators have access to the current network via the Engine API. Here is an example code for the generator that creates a "reservoir" (a collection of randomly recurrently connected neurons with fixed synaptic weights):
 
 ~~~js
 import Generator from "@flux-agi/generator";
@@ -61,4 +61,4 @@ export default ReservoirDefinition;
 
 ~~~
 
-So generator is basically a boilerplate that helps you create configurable circuits on the fly, depending on the parameters that you provide. It can be very useful in many situations.
+A generator is basically a boilerplate that helps you create configurable circuits on the fly, based on a set of parameters that you provide.

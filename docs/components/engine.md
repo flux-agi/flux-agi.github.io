@@ -1,21 +1,21 @@
 # Engine
 
-Engine is the root of the network. It handles the interaction between neurons, and provides a general API for accessing and manipulating network state. In can be treated as the root of the Flux networks.
+The engine is the root of the FLUX artificial nervous system. It handles the interaction between neurons, performs computations, orchestrates the activity and provides a rich API for accessing and manipulating network state and individual nodes.
 
-On the engine level then nesting and hierarchy is ignored, and all the connectome is converged to flat list of neurons and connections between them. Organs are also treated as collection of neurons, with an exception that the organ code runs some arbirtary operations, but in the end, they alweays result in the set of activity of interace neurons.
+At the engine level, nesting and hierarchy are ignored, and all the network components are converged to a flat list of neurons and connections between them. Organs represent a standalone computational unit that interacts with the network via its neuronal interface.
 
-Engine exposes an API to control the execution and access the components up to individual neurons and synapses, and call methods on them. This is mostly usful in Organs, where engine instance is passed to the constructor and accessible in organ methods.
+The engine exposes an API to control the execution and access the components up to individual neurons and synapses, and call methods on them. This is mostly useful in organs. An Engine instance is passed to the constructor and accessible in the Organs and Generators classes.
 
-Engine works with a single root circuit instance:
+The engine works with a single root circuit instance:
 
-In case you change the root circuit, the new one will be loaded to the engine and executed.
+If you change the root circuit, the new one will be loaded into the engine and executed.
 
 ## Methods
 
 | Name                             | Type                                        | Description                                                                                                                                |
 | -------------------------------- | -------------------- |  ------------------------------------------------------------------------------------------------------------------------------------------ |
 | `init`                    | (circuit: CircuitType) => void                  | Loads root circuit and prepares it for execution        |
-| `on`                    | (node: NodeType, id: string, callback) => void                 | Subscribes to a change on a node  |
+| `on`                    | (node: NodeType, id: string, callback) => void                 | Subscribes to a change on a selected node  |
 | `emit`                    | (node: NodeType, id: string, payload: any) =>void                  | Subscribes to a change on a node  |
 | `registerOrgans`                    | (organs: [OrganInstanceType]) => void               | Loads a list of local organs and makes them accessible in the explorer    |
 | `registerGenerators`                    | (generators: [OrganInstanceType]) => void              | Loads a list of local generators and makes them accessible in the explorer      |
